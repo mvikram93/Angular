@@ -1,0 +1,36 @@
+<!--<p>
+  <span>ID :</span><span>{{second.name|uppercase}}</span>
+  <br/>
+  {{second.phone}}
+</p>
+  <div>
+  <label>
+    Name : <input [(ngModel)]="hero.name" placeholder="Name">
+  </label>
+</div>
+<h2>
+  <ul>
+    <li *ngFor="let hero2 of mem">
+      <span class="badge">{{hero2.id}}</span><br/>{{hero2.name}}
+    </li>
+  </ul>
+</h2>
+-->
+<!--
+<div>
+  <form class="container" #userform="ngForm" (ngSubmit) ="onSubmit(userform.value)">
+  <input type="text" name="firstName" placeholder="firstName" ngModel/><br/>
+  <input type="text" name="secondName" placeholder="secondName" ngModel/><br/>
+  <input type="submit" name="Submit"/>
+  </form>
+</div>
+-->
+<div>
+  <form class="container" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    <input type="text" name="firstName" placeholder="firstName" formControlName="firstName"/><br/>
+    <input type="text" name="secondName" placeholder="secondName" formControlName="secondName"/><br/>
+    <input type="submit" name="Submit"/>
+  </form>
+</div>
+
+
